@@ -10,12 +10,7 @@ import { useTheme } from '../../context/ThemeContext'
 
 const typedWords = personal.titles
 
-const floatingTechIcons = [
-  { label: 'React', emoji: '⚛️', delay: 0, orbitRadius: 140, speed: 12 },
-  { label: 'Node', emoji: '🟢', delay: 3, orbitRadius: 160, speed: 16 },
-  { label: 'MongoDB', emoji: '🍃', delay: 6, orbitRadius: 120, speed: 10 },
-  { label: 'CSS', emoji: '🎨', delay: 9, orbitRadius: 150, speed: 14 },
-]
+
 
 const socialLinks = [
   { Icon: GithubIcon, href: personal.github, label: 'GitHub', color: '#ffffff' },
@@ -116,7 +111,7 @@ const Hero = () => {
         style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.12), transparent)' }} />
 
       {/* Content */}
-      <div className="container-custom relative z-10 w-full py-20 pt-32">
+      <div className="container-custom relative z-10 w-full py-20 pt-40 lg:pt-48">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* ── LEFT CONTENT ── */}
@@ -259,7 +254,7 @@ const Hero = () => {
 
           {/* ── RIGHT CONTENT ── */}
           <motion.div
-            className="flex items-center justify-center relative"
+            className="flex items-center justify-center relative -translate-y-10 lg:-translate-y-14"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -288,11 +283,12 @@ const Hero = () => {
               />
 
               {/* Photo / Avatar */}
-              <div className="absolute inset-2 rounded-full overflow-hidden hexagon-clip"
-                style={{ background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)' }}>
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-8xl select-none">👨‍💻</span>
-                </div>
+              <div className="absolute inset-0 rounded-full overflow-hidden hexagon-clip bg-gray-900/50 flex items-center justify-center">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Muhammad Shahzaib" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Floating Badge - Experience */}
@@ -302,8 +298,8 @@ const Hero = () => {
                 transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                 style={{ border: '1px solid rgba(99,102,241,0.3)' }}
               >
-                <div className="text-lg font-bold gradient-text font-heading">3+</div>
-                <div className="text-xs" style={{ color: '#94a3b8' }}>Years Exp.</div>
+                <div className="text-lg font-bold gradient-text font-heading">6+</div>
+                <div className="text-xs" style={{ color: '#94a3b8' }}>Months Exp.</div>
               </motion.div>
 
               {/* Floating Badge - Projects */}
@@ -313,39 +309,11 @@ const Hero = () => {
                 transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
                 style={{ border: '1px solid rgba(139,92,246,0.3)' }}
               >
-                <div className="text-lg font-bold font-heading" style={{ color: '#8b5cf6' }}>50+</div>
+                <div className="text-lg font-bold font-heading" style={{ color: '#8b5cf6' }}>10+</div>
                 <div className="text-xs" style={{ color: '#94a3b8' }}>Projects</div>
               </motion.div>
 
-              {/* Floating Tech Icons */}
-              {floatingTechIcons.map((icon, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-10 h-10 glass rounded-xl flex items-center justify-center text-lg"
-                  style={{ top: '50%', left: '50%', border: '1px solid rgba(255,255,255,0.1)' }}
-                  animate={{ rotate: 360 }}
-                  transition={{
-                    duration: icon.speed,
-                    repeat: Infinity,
-                    ease: 'linear',
-                    delay: icon.delay * 0.5
-                  }}
-                >
-                  <motion.span
-                    style={{
-                      position: 'absolute',
-                      transform: `rotate(${i * 90}deg) translateX(${icon.orbitRadius}px) rotate(${-(i * 90)}deg)`
-                    }}
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: icon.speed, repeat: Infinity, ease: 'linear', delay: icon.delay * 0.5 }}
-                  >
-                    <div className="w-9 h-9 glass rounded-xl flex items-center justify-center text-base"
-                      style={{ border: '1px solid rgba(99,102,241,0.2)' }}>
-                      {icon.emoji}
-                    </div>
-                  </motion.span>
-                </motion.div>
-              ))}
+
             </div>
           </motion.div>
         </div>

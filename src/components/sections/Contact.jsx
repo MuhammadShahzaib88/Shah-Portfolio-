@@ -253,7 +253,7 @@ const Contact = () => {
                         <User size={14} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#64748b' }} />
                         <input
                           {...register('name', { required: 'Name is required' })}
-                          placeholder="John Doe"
+                          placeholder="Shahzaib"
                           className="w-full pl-9 pr-4 py-3 rounded-xl text-sm outline-none transition-all"
                           style={{
                             ...inputStyle,
@@ -276,7 +276,7 @@ const Contact = () => {
                             pattern: { value: /^\S+@\S+\.\S+$/, message: 'Invalid email' }
                           })}
                           type="email"
-                          placeholder="john@example.com"
+                          placeholder="shahzaibbangash24@gmail.com"
                           className="w-full pl-9 pr-4 py-3 rounded-xl text-sm outline-none transition-all"
                           style={inputStyle}
                           onFocus={e => e.target.style.borderColor = '#6366f1'}

@@ -7,10 +7,10 @@ import { useCountUp } from '../../hooks/useCountUp'
 import { useTheme } from '../../context/ThemeContext'
 
 const stats = [
-  { label: 'Projects Completed', value: 50, suffix: '+' },
-  { label: 'Happy Clients', value: 30, suffix: '+' },
-  { label: 'Years Experience', value: 3, suffix: '+' },
-  { label: 'GitHub Stars', value: 120, suffix: '+' },
+  { label: 'Projects Completed', value: 10, suffix: '+' },
+  { label: 'Happy Clients', value: 2, suffix: '' },
+  { label: 'Months Experience', value: 6, suffix: '+' },
+  { label: 'GitHub Stars', value: 3, suffix: '' },
 ]
 
 const infoItems = [
@@ -72,10 +72,13 @@ const About = () => {
               {/* Animated gradient border */}
               <div className="gradient-border p-1 rounded-2xl">
                 <div
-                  className="w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden flex items-center justify-center"
-                  style={{ background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)' }}
+                  className="w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900/50"
                 >
-                  <span className="text-9xl">👨‍💻</span>
+                  <img 
+                    src="/profile.jpg" 
+                    alt="About Me" 
+                    className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                  />
                 </div>
               </div>
 
@@ -86,8 +89,8 @@ const About = () => {
                 transition={{ duration: 3, repeat: Infinity }}
                 style={{ border: '1px solid rgba(245,158,11,0.3)' }}
               >
-                <div className="text-2xl font-black font-heading" style={{ color: '#f59e0b' }}>3+</div>
-                <div className="text-xs" style={{ color: '#94a3b8' }}>Years Experience</div>
+                <div className="text-2xl font-black font-heading" style={{ color: '#f59e0b' }}>6+</div>
+                <div className="text-xs" style={{ color: '#94a3b8' }}>Months Experience</div>
               </motion.div>
 
               {/* Projects badge */}
@@ -97,7 +100,7 @@ const About = () => {
                 transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
                 style={{ border: '1px solid rgba(139,92,246,0.3)' }}
               >
-                <div className="text-2xl font-black font-heading" style={{ color: '#8b5cf6' }}>50+</div>
+                <div className="text-2xl font-black font-heading" style={{ color: '#8b5cf6' }}>10+</div>
                 <div className="text-xs" style={{ color: '#94a3b8' }}>Projects Done</div>
               </motion.div>
             </div>
