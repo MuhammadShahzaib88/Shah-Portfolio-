@@ -53,8 +53,8 @@ const About = () => {
       <div className="container-custom relative z-10">
         <SectionHeading
           label="About Me"
-          title={`Passionate Developer<br/><span class="gradient-text">Creating Digital Experiences</span>`}
-          subtitle="Building impactful, scalable, and beautiful web solutions since 2021."
+          title={`Aspiring Cloud & DevOps<br/><span class="gradient-text">Engineer</span>`}
+          subtitle="A BS Computer Science foundation, previous web development skills, and hands-on learning across Linux, AWS, Docker, and cloud infrastructure."
         />
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
